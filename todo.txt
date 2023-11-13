@@ -1,0 +1,4 @@
+//Home
+footer
+arrival departure
+rooms
