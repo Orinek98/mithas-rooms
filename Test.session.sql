@@ -36,8 +36,8 @@ VALUES(
 );
 
 --@block
-ALTER TABLE Reservations
-DROP COLUMN room3 INT AFTER room2;
+ALTER TABLE ROOMS
+ADD COLUMN price INT AFTER slot;
 
 -- @block
 CREATE TABLE Rooms(
@@ -47,11 +47,11 @@ CREATE TABLE Rooms(
 );
 
 -- @block
-INSERT INTO Rooms(name, slot)
+INSERT INTO Rooms(name, slot, price)
 VALUES
-    ('Teal', 2),
-    ('Orange', 4),
-    ('Blue', 4);
+    ('Teal', 2, 60),
+    ('Orange', 4, 80),
+    ('Blue', 4, 80);
 
 --@block
 SELECT * FROM Reservations
@@ -65,11 +65,11 @@ checkout BETWEEN "2022-10-26" AND "2022-10-31"
 --@block
 
 Select *
-        FROM  RESERVATIONS 
+        FROM  ROOMS 
 
 --@block
-DELETE FROM Reservations
-WHERE user = "pippo"
+DELETE FROM ROOMS
+WHERE name = "Blue"
 
 --@block
 SELECT * FROM Rooms
@@ -79,10 +79,19 @@ WHERE NOT name = ALL (
     AND (checkout >"2023-12-18" AND checkout < "2023-12-22")))
     
 --@block
-SELECT *
-FROM Rooms
-WHERE name NOT IN (
-    SELECT room FROM Reservations
-    WHERE NOT (checkout   < '2023-12-18'
-               OR
-               checkin > '2023-12-20'))
+
+    SELECT *
+    FROM Rooms r1
+    WHERE name NOT IN (
+        SELECT room FROM Reservations
+        WHERE NOT (checkout   < '2023-12-18'
+                    OR
+                    checkin > '2023-12-20'))
+   UNION(
+        SELECT sum(slot)
+        FROM Rooms r2
+        WHERE r1.name = r2.name
+   )
+   
+
+

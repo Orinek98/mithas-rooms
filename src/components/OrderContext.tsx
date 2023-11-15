@@ -1,8 +1,18 @@
 "use client"
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, Dispatch } from "react";
+import type { SetStateAction } from "react";
+
+export type OrderContent = {
+  orderProducts: string[];
+  setOrderProducts: Dispatch<SetStateAction<string[]>>;
+  addProduct: (productId: string) => void;
+  removeProduct: (productId: string) => void;
+  clearOrder: () => void;
+
+} 
 
 
-export const OrderContext = createContext({});
+export const OrderContext = createContext<OrderContent>({} as OrderContent);
 
 function OrderContextProvider({children} : {children: React.ReactNode}) {
 

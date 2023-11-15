@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import OrderContextProvider from '@/components/OrderContext'
 import '@/style/globals.css'
 import '@/style/calendar.css'
 import '@/style/dataRangePicker.css'
@@ -20,12 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <OrderContextProvider>
       <html lang="en">
         <body className={inter.className}>
           {children}
         </body>
       </html>
-    </OrderContextProvider>
   )
 }
