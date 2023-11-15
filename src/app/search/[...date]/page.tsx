@@ -28,7 +28,7 @@ type option = {
   label: string
 }
 
-function searchPage() {
+function SearchPage() {
 
   const [avaible, setAvaible] = useState<dbRooms[]>([])
 
@@ -183,4 +183,4 @@ function searchPage() {
     
 }
 
-export default searchPage
+export default SearchPage
