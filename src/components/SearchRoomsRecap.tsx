@@ -24,9 +24,9 @@ function SearchRoomsRecap({adult, child, checkIn, checkOut} : props) {
             <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">Requested Rooms for {(+adult)+(+child)} guests</h5>
         </div>
         <div className="flow-root">
-        {orderProducts.map(prod =>(
             <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
-            <li className="py-3 sm:py-4">
+        {orderProducts.map(prod =>(
+            <li key={prod.id} className="py-3 sm:py-4">
                 <div className="flex items-center">
                     <div className="flex-shrink-0">
                         <img className="w-8 h-8 rounded-full" src="http://localhost:3000/rooms/singola.jpg" alt="Neil image" />
@@ -44,8 +44,8 @@ function SearchRoomsRecap({adult, child, checkIn, checkOut} : props) {
                     </div>
                 </div>
             </li>
-            </ul>
         ))}
+        </ul>
         <p className='text-xl font- bold text-right'>€{totalCart}</p>
         </div>
     </div>
