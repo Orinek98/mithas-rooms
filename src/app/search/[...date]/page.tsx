@@ -11,26 +11,11 @@ import type { dbRooms } from '@/lib/rooms'
 
 let renderCount = 0
 
-<<<<<<< HEAD
-=======
-export type dbRooms = {
-  id: String,
-  name: String,
-  slot: number
-  price: number
-}
-
-type option = {
-  value: string | number,
-  label: string
-}
-
->>>>>>> 4e23aa0bdcc6e6f13f3bf3b09f79b97a61fb2513
 function SearchPage() {
 
   const [avaible, setAvaible] = useState<dbRooms[]>([])
   
-  const pathname = useParams()
+  const pathname = useParams();
 
   const checkInReq = pathname.date[0].slice(0,10) as String
   const checkOutReq = pathname.date[0].slice(11) as String
