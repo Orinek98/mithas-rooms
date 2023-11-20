@@ -1,4 +1,4 @@
-import { dbReservation } from "@/app/search/[...date]/page"
+import type { dbReservation } from "@/lib/rooms"
 import mysql from "mysql2/promise"
 import { NextResponse } from 'next/server'
 
