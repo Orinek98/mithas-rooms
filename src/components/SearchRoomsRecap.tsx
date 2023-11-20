@@ -26,7 +26,7 @@ function SearchRoomsRecap({adult, child, checkIn, checkOut} : props) {
         <div className="flow-root">
             <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
         {orderProducts.map(prod =>(
-            <li key={prod.id} className="py-3 sm:py-4">
+            <li key={prod.id as string} className="py-3 sm:py-4">
                 <div className="flex items-center">
                     <div className="flex-shrink-0">
                         <img className="w-8 h-8 rounded-full" src="http://localhost:3000/rooms/singola.jpg" alt="Neil image" />
