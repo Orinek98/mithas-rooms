@@ -9,11 +9,11 @@ function Info() {
           
           <div className='max-w-[40%] pl-6'>
             <h1 className='text-4xl text-white mb-4'>Welcome to Mithas Rooms B&B</h1>
-            <p className='text-white max-w-[80%]'>Located in a historic building in the city center, our B&B provides a perfect base for immersing yourself in Catania's unique culture and atmosphere. Our well-appointed rooms are designed with your comfort in mind, ensuring a pleasant stay. Each morning, savor a delicious Sicilian breakfast featuring fresh local specialties and aromatic coffee.</p>
+            <p className='text-white max-w-[80%]'>Located in a historic building in the city center, our B&B provides a perfect base for immersing yourself in Catania&aposs unique culture and atmosphere. Our well-appointed rooms are designed with your comfort in mind, ensuring a pleasant stay. Each morning, savor a delicious Sicilian breakfast featuring fresh local specialties and aromatic coffee.</p>
           </div>
 
           <div>
-            <img className='p-4 flex rounded-2xl' src="/grand-room.jpg" />
+            <img className='p-4 flex rounded-2xl' src="/grand-room.jpg" alt="grandroom" />
           </div>
 
         </div>
@@ -29,7 +29,7 @@ function Info() {
 
           <div className='max-w-[40%]'>
             <h1 className='text-4xl text-white mb-4'>Welcome to Mithas Rooms B&B</h1>
-            <p className='text-white max-w-[80%]'>Located in a historic building in the city center, our B&B provides a perfect base for immersing yourself in Catania's unique culture and atmosphere. Our well-appointed rooms are designed with your comfort in mind, ensuring a pleasant stay. Each morning, savor a delicious Sicilian breakfast featuring fresh local specialties and aromatic coffee.</p>
+            <p className='text-white max-w-[80%]'>Located in a historic building in the city center, our B&B provides a perfect base for immersing yourself in Catania&aposs unique culture and atmosphere. Our well-appointed rooms are designed with your comfort in mind, ensuring a pleasant stay. Each morning, savor a delicious Sicilian breakfast featuring fresh local specialties and aromatic coffee.</p>
           </div>
 
         </div>

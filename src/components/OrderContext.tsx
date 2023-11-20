@@ -1,12 +1,14 @@
 "use client"
 import { useState, createContext, useEffect, Dispatch } from "react";
 import type { SetStateAction } from "react";
+import type { dbRooms } from "@/lib/rooms";
+
 
 export type OrderContent = {
-  orderProducts: string[];
-  setOrderProducts: Dispatch<SetStateAction<string[]>>;
-  addProduct: (productId: string) => void;
-  removeProduct: (productId: string) => void;
+  orderProducts: dbRooms[];
+  setOrderProducts: Dispatch<SetStateAction<dbRooms[]>>;
+  addProduct: (product: dbRooms) => void;
+  removeProduct: (product: dbRooms) => void;
   clearOrder: () => void;
 
 } 
@@ -16,9 +18,9 @@ export const OrderContext = createContext<OrderContent>({} as OrderContent);
 
 function OrderContextProvider({children} : {children: React.ReactNode}) {
 
-  const ls =  typeof window !== "undefined" ? window.localStorage : null;
+  const ls =  typeof window !== "undefined" ? window.sessionStorage : null;
   
-  const [orderProducts, setOrderProducts] =  useState<string[]>([]);
+  const [orderProducts, setOrderProducts] =  useState<dbRooms[]>([]);
   
   useEffect(() =>{
       if(orderProducts?.length > 0){
@@ -33,13 +35,15 @@ function OrderContextProvider({children} : {children: React.ReactNode}) {
   },[])
 
     
-  function addProduct(productId : string){
-    setOrderProducts(prev  =>[...prev, productId])
+  function addProduct(product : dbRooms){
+    if(orderProducts.find(p => p.id === product.id)) return;
+    setOrderProducts(prev  =>[...prev, product])
+    
   }
 
-  function removeProduct(productId : string){
+  function removeProduct(product : dbRooms){
     setOrderProducts(prev =>{
-      const pos = prev.indexOf(productId)
+      const pos = prev.indexOf(product)
 
       if(pos !== -1){
          return prev.filter((value, index) => index !== pos)

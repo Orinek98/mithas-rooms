@@ -6,3 +6,41 @@ export async function getAllRooms(){
     const data = await res.json();
     return data.results;
   }
+
+  export type dbReservation = {
+    id: string,
+    user: string,
+    room: String,
+    checkin: Date,
+    checkout: Date
+  }
+  
+  export type dbRooms = {
+    id: String,
+    name: String,
+    slot: number
+    price: number
+    reservedSlot: number
+  }
+  
+  export type option = {
+    value: string | number,
+    label: string
+  }
+  
+  export type FormValues = {
+    first_name: string,
+    last_name: string,
+    email: string,
+    phone: string,
+    room : {
+      name: {
+        label: string;
+        value: number
+      },
+      slot: {
+        label: string;
+        value: number
+      }
+    }[];
+  }
