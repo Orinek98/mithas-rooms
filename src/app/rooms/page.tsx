@@ -1,6 +1,6 @@
 import { getAllRooms } from "@/lib/rooms";
 
-export default async function roomsPage() {
+export default async function RoomsPage() {
     const data = await getAllRooms();
 
   return (
