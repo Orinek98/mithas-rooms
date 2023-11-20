@@ -9,7 +9,7 @@ let arrow = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 
             </svg>
 
 
-type ValuePiece = Date | null
+type ValuePiece = Date | any
 
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
