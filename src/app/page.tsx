@@ -22,8 +22,8 @@ export default function Home() {
 
       <Header />
 
-      <div className='flex flex-wrap gap-y-6 gap-x-6 lg:gap-x-24 sm:flex-nowrap items-center justify-center pt-6 px-2'>
-        <div className='max-w-[1000px] w-full md:aspect-3/2 xs:aspect-square xs:mr-0'>
+      <div className='flex flex-wrap gap-y-6 gap-x-6 lg:gap-x-24 sm:flex-nowrap items-center justify-center pt-5 px-2'>
+        <div className='max-w-[1150px] w-full md:aspect-3/2 xs:aspect-square xs:mr-0'>
           <NewImageSlider images={heroImage} />
         </div>
         <div className='xs:mr-0'>
@@ -33,7 +33,11 @@ export default function Home() {
 
       <Info />
 
+    <section className='p-2'>
+      <h1 className='text-4xl font-bold px-16 pt-8'>The Rooms</h1>
+
       <Rooms />
+    </section>
 
       <Contact />
 

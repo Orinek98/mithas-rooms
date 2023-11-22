@@ -5,6 +5,8 @@ import '@/style/globals.css'
 import '@/style/calendar.css'
 import '@/style/dataRangePicker.css'
 import '@/style/image-slider.css'
+import '@/style/room_card.css'
+
 
 
 const inter = Inter({ subsets: ['latin'] })

@@ -3,34 +3,88 @@ import Link from 'next/link'
 
 export default function Rooms() {
   return (
-    <>
-        <h1 className='text-4xl px-10 my-10'>The Rooms</h1>
-
-        <div className="mx-auto px-10">
-
-        <div className='grid grid-cols-3 justify-center gap-10'>
-            <Link href={"/"}>
-            <div className=' max-w-[90%] shadow-lg p-3'>
-                <img src="/rooms/doppia.jpg" />
-                <h2 className='text-center'>tripla</h2>
+    <section className='grid gap-y-4 py-6'>
+        <div className='grid grid-cols-auto grid-flow-row md:grid-flow-col justify-center gap-x-4'>
+            <article className="card">
+                <img
+                    className="card__background"
+                    src="/rooms/matrimoniale.jpg"
+                    alt="Teal 2"
+                    width="1920"
+                    height="2193"
+                />
+                <div className="card__content | flow">
+                    <div className="card__content--container | flow">
+                    <h2 className="card__title text-2xl">Teal</h2>
+                    <p className="card__description text-md">
+                    This is Mitha’s most luxurious room, characterized by its wonderful double bed...
+                    </p>
+                    </div>
+                    <button className="card__button">Read more</button>
                 </div>
-            </Link>
-            <Link href={"/"}>
-            <div className='rounded-md max-w-[90%] shadow-lg'>
-                <img src="/rooms/singola.jpg" />
-                <h2 className='text-xl'>Quadruplaa</h2>
-                </div>
-            </Link>
-            <Link href={"/"}>
-                <div className='border max-w-[90%] shadow-lg p-3'>
-                <img src="/rooms/matrimoniale.jpg"/>
-                <h2 className='text-center'>Matrimoniale</h2>
-                </div>
-            </Link>
+                </article>
 
+            <article className="card">
+                <img
+                    className="card__background"
+                    src="/rooms/matrimoniale.jpg"
+                    alt="Teal 2"
+                    width="1920"
+                    height="2193"
+                />
+                <div className="card__content | flow">
+                    <div className="card__content--container | flow">
+                    <h2 className="card__title text-2xl">Orange</h2>
+                    <p className="card__description">
+                    This is Mitha’s most luxurious room, characterized by its wonderful double bed...
+                    </p>
+                    </div>
+                    <button className="card__button">Read more</button>
+                </div>
+                </article>
+
+            <article className="card">
+                <img
+                    className="card__background"
+                    src="/rooms/matrimoniale.jpg"
+                    alt="Teal 2"
+                    width="1920"
+                    height="2193"
+                />
+                <div className="card__content | flow">
+                    <div className="card__content--container | flow">
+                    <h2 className="card__title text-2xl">Blue</h2>
+                    <p className="card__description">
+                    This is Mitha’s most luxurious room, characterized by its wonderful double bed...
+                    </p>
+                    </div>
+                    <button className="card__button">Read more</button>
+                </div>
+            </article>
         </div>
-
+        <div className='grid justify-center'>
+            <article className="cardxl">
+                    <img
+                        className="cardxl__background"
+                        src="/rooms/bella.jpg"
+                        alt="Teal 2"
+                        width="1920"
+                        height="2193"
+                    />
+                    <div className="cardxl__content | flowxl">
+                        <div className="cardxl__content--container | flowxl">
+                            <h2 className="cardxl__title text-2xl">Comm Rooms</h2>
+                            <p className="cardxl__description">
+                                This is Mitha’s most luxurious room, characterized by its wonderful double bed...
+                            </p>
+                        </div>
+                        <button className="cardxl__button">Read more</button>
+                    </div>
+            </article>
         </div>
-    </>
+    </section>
   )
 }
+
+
+{/* <h1 className='text-4xl px-10 my-10'>The Rooms</h1> */}

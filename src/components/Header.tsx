@@ -10,7 +10,6 @@ function Header() {
           <nav className='flex gap-10 text-white text-xl'>
             <Link style={{color: 'white'}} href="./">Home</Link>
             <Link style={{color: 'white'}} href="./rooms">Rooms</Link>
-            <Link style={{color: 'white'}} href="./gallery">Gallery</Link>
             <Link style={{color: 'white'}} href="./maps">Maps</Link>
             <Link style={{color: 'white'}} href="./contact">Contact</Link>
           </nav>
