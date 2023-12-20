@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Rooms() {
   return (
     <section className='grid gap-y-4 py-6'>
-        <div className='grid grid-cols-auto grid-flow-row md:grid-flow-col justify-center gap-x-4'>
+        <div className='flex flex-wrap justify-center gap-y-4 gap-x-4'>
             <article className="card">
                 <img
                     className="card__background"

@@ -7,12 +7,37 @@ CREATE TABLE Users(
 );
 
 --@block
+SELECT * from Users2
+
+--@block
+SELECT * from reservations
+
+--@block
+INSERT INTO Users2(firstName, lastName, email, phone, country)
+VALUES(
+    'Giovanna',
+    'Blue',
+    'gigio@gmail.com',
+    '3422123234',
+    'italy'
+);
+
+--@block
 CREATE TABLE Reservations(
     id INT PRIMARY KEY AUTO_INCREMENT,
     user VARCHAR(255),
     room VARCHAR(255),
     checkin DATE,
     checkout DATE
+);
+--@block
+CREATE TABLE Users2(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    firstName VARCHAR(255),
+    lastName VARCHAR(255),
+    email VARCHAR(255),
+    phone VARCHAR(255),
+    country VARCHAR(255)
 );
 
 -- @block

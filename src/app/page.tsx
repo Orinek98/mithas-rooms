@@ -22,24 +22,26 @@ export default function Home() {
 
       <Header />
 
-      <div className='flex flex-wrap gap-y-6 gap-x-6 lg:gap-x-24 sm:flex-nowrap items-center justify-center pt-5 px-2'>
-        <div className='max-w-[1150px] w-full md:aspect-3/2 xs:aspect-square xs:mr-0'>
-          <NewImageSlider images={heroImage} />
-        </div>
-        <div className='xs:mr-0'>
+      <div className='w-[100%] md:w-[90%] relative mx-auto mb-28 md:mb-8 mt-8  lg:aspect-21/9 xs:aspect-square'>
+        <NewImageSlider images={heroImage} />
+        <div className='absolute z-10  max-w-[28rem] left-0 right-0 mx-auto md:bottom-2 opacity-80 hover:opacity-100 ease-linear duration-200'>
           <SearchRooms />
         </div>
       </div>
+    
 
       <Info />
 
     <section className='p-2'>
       <h1 className='text-4xl font-bold px-16 pt-8'>The Rooms</h1>
-
       <Rooms />
     </section>
 
+    <section>
+      <h1>Contact</h1>
       <Contact />
+    </section>
+
 
       <Footer />
 

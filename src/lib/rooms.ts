@@ -16,8 +16,8 @@ export async function getAllRooms(){
   }
   
   export type dbRooms = {
-    id: String,
-    name: String,
+    id: string,
+    name: string,
     slot: number
     price: number
     reservedSlot: number
@@ -33,6 +33,7 @@ export async function getAllRooms(){
     last_name: string,
     email: string,
     phone: string,
+    country: string,
     room : {
       name: {
         label: string;
@@ -43,4 +44,11 @@ export async function getAllRooms(){
         value: number
       }
     }[];
+  }
+
+
+  export type FormRoom = {
+    room: dbRooms,
+    adult: number,
+    child: number
   }

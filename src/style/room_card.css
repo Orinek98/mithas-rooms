@@ -2,7 +2,7 @@
 
 :root {
   /* Colors */
-  --brand-color: hsl(46, 100%, 50%);
+  --brand-color: hsl(344,38.1%,53.7%);
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   /* Fonts */
@@ -119,10 +119,10 @@ p {
   font-weight: bold;
   border-radius: 0.45em;
   border: none;
-  background-color: var(--brand-color);
+  background-color: #5cb69e;
   font-family: var(--font-title);
   font-size: 1.125rem;
-  color: var(--black);
+  color: var(--white);
 }
 
 .card__button:focus {
@@ -269,10 +269,10 @@ p {
   font-weight: bold;
   border-radius: 0.45em;
   border: none;
-  background-color: var(--brand-color);
+  background-color: #5cb69e;
   font-family: var(--font-title);
   font-size: 1.125rem;
-  color: var(--black);
+  color: var(--white);
 }
 
 .cardxl__button:focus {

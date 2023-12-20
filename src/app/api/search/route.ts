@@ -3,7 +3,6 @@ import mysql from "mysql2/promise"
 import { NextResponse } from 'next/server'
 
 export async function POST(request : Request){
-
     const data = await request.json()
     const { checkInReq, checkOutReq, count, name } = data
     console.log("server: ", checkInReq, checkOutReq)
@@ -15,7 +14,6 @@ export async function POST(request : Request){
         password: "ghepardo98"
 
     })
-
 
     try {
         const query = `SELECT * 
@@ -37,25 +35,39 @@ export async function POST(request : Request){
     }
 }
 
-// SELECT *
-// FROM Rooms
-// WHERE name NOT IN (
-//     SELECT room FROM Reservations
-//     WHERE NOT (checkout   < '2023-12-18'
-//                OR
-//                checkin > '2023-12-20'))
+export async function PUT(request : Request){
 
-// WHERE checkin = DATE('${checkInReq}')
+    const data = await request.json()
+    const { roomId, a, c, email, checkInReq, checkOutReq } = data
+    console.log("server: ", roomId, a, c, email, checkInReq, checkOutReq )
 
+    const dbconnection = await mysql.createConnection({
+        host: "localhost",
+        database: "hotel",
+        user: "root",
+        password: "ghepardo98"
 
+    })
 
-// `Select * FROM RESERVATIONS WHERE NOT
-//         checkin BETWEEN ${checkIn} AND ${checkOut} AND WHERE NOT
-//         checkout BETWEEN ${checkIn} AND ${checkOut}`
+    try {
+        const query = `INSERT INTO Reservations (user, room, checkin, checkout, adult, child)
+        VALUES(
+            '${email}',
+            '${roomId}',
+            '${checkInReq}',
+            '${checkOutReq}',
+            '${a}',
+            '${c}'
+        );`
+                
+        await dbconnection.execute(query);
+        dbconnection.end();
 
+        console.log("server data: ",data)
 
-// `Select * 
-//             FROM RESERVATIONS 
-//             WHERE checkin > DATE('${checkInReq}') `
-
+        return NextResponse.json({ results: "ok"})
+    } catch (error : any) {
+        return NextResponse.json({error: error.message})
+    }
+}
 

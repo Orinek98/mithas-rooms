@@ -29,21 +29,21 @@ function Header() {
   return (
     <Flowbite theme={{ theme: customNav }}>
       <Navbar fluid>
-      <Navbar.Brand as={Link} href="./">
+      <Navbar.Brand as={Link} href="../.././">
       <Image src="/logo.jpg" className='ml-8' width={150} height={100} alt="logo"/>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link as={Link} active href="./">
+        <Navbar.Link as={Link} active href="../.././">
           Home
         </Navbar.Link>
-        <Navbar.Link as={Link} active href="./rooms">
+        <Navbar.Link as={Link} active href="../../rooms">
           Rooms
         </Navbar.Link>
-        <Navbar.Link as={Link} active href="./maps">
+        <Navbar.Link as={Link} active href="../../maps">
           Services
         </Navbar.Link>
-        <Navbar.Link as={Link} active href="./contact">
+        <Navbar.Link as={Link} active href="../../contact">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
