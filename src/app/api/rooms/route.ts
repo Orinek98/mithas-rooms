@@ -6,7 +6,7 @@ export async function GET(){
         host: "localhost",
         database: "hotel",
         user: "root",
-        password: "ghepardo98"
+        password: "##########"
 
     })
 
