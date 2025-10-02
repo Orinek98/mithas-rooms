@@ -12,7 +12,7 @@ export async function PUT(request : Request){
         host: "localhost",
         database: "hotel",
         user: "root",
-        password: "ghepardo98"
+        password: "##########"
 
     })
 
