@@ -11,7 +11,7 @@ export async function POST(request : Request){
         host: "localhost",
         database: "hotel",
         user: "root",
-        password: "ghepardo98"
+        password: "##########"
 
     })
 
